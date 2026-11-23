@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #350e36, #a33b75, #f5a1bb);
+    overflow-x: hidden;
+}
+
+/* CORAZONES FLOTANTES */
+
+.corazon {
+    position: fixed;
+    bottom: -40px;
+    color: #ffb6d1;
+    animation: flotar linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+    20% { opacity: 1; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* PANTALLA INICIAL */
+
+#inicio {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 10;
+    background: linear-gradient(135deg, #350e36, #a33b75, #f5a1bb);
+    padding: 20px;
+}
+
+#inicio h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.corazon-grande {
+    font-size: 100px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    animation: latido 1.2s infinite;
+    filter: drop-shadow(0 0 20px #ffb6d1);
+}
+
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.18); }
+}
+
+#inicio .instruccion {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+/* CARTA */
+
+#carta {
+    display: none;
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 650px;
+    margin: 45px auto;
+    padding: 40px;
+    background: #fff5f7;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px #0006;
+    animation: aparecer 1.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    color: #bd3970;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.texto {
+    color: #633449;
+    font-size: 18px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.decoracion {
+    text-align: center;
+    font-size: 30px;
+    margin: 25px;
+}
+
+.firma {
+    text-align: center;
+    font-size: 25px;
+    color: #bd3970;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+/* MUSICA */
+
+.musica {
+    text-align: center;
+    margin-top: 30px;
+    color: #bd3970;
+}
+
+.musica iframe {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+@media(max-width: 480px) {
+    #carta {
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    .texto {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- CORAZONES ANIMADOS -->
+
+<script>
+for (let i = 0; i < 30; i++) {
+    let c = document.createElement("div");
+    c.className = "corazon";
+    c.innerHTML = "❤";
+    c.style.left = Math.random() * 100 + "vw";
+    c.style.fontSize = (15 + Math.random() * 25) + "px";
+    c.style.animationDuration = (6 + Math.random() * 8) + "s";
+    c.style.animationDelay = Math.random() * 8 + "s";
+    document.body.appendChild(c);
+}
+</script>
+
+<!-- PANTALLA DE BIENVENIDA -->
+
+<div id="inicio">
+
+    <h1>Para mi bebe</h1>
+
+    <p>Una cartita con mucho amor</p>
+
+    <button class="corazon-grande" onclick="abrirCarta()">
+        ❤️
+    </button>
+
+    <div class="instruccion">
+        Toca el corazón
+    </div>
+
+</div>
+
+<!-- CARTA DE AMOR -->
+
+<div id="carta">
+
+    <div class="decoracion">💗 ✨ 💗</div>
+
+    <h2>Para alguien especial</h2>
+
+    <div class="texto">
+
+        Mi amor:
+
+        <br><br>
+
+        te amo mi amor, te amo tanto tantoooooo, perdón x todas las veces que te hice sentir mal, x todas las mentiras que te he dicho, eres la mejor mujer que he conocido, la mejor novia del mundo, la niña más tierna y graciosa del planeta, mi señora Tandazooooo, mi bebé chiquita, te amo mi Gianellita, te amo con todo mi ser, con todo mi corazón que si te digo "mi pedacito de corazón" estaría mintiendo xq tú eres mi corazón entero, la mujer q lo hace latir con amor, te amo mi "oye ven a jugar", te amo mi "hola""chao", te amo mi "pelo mocho", te amo mi cachetoncita hermosa, reina de mi corazón, te admiro en todo lo que haces, eres una mujer fabuloso, me encanta que a pesar de tu corta edad eres muy responsable y madura, admiro como te cuidas, admiro como mantienes la calma, admiro lo fuerte q eres, admiro q cuando te sientes mal llores xq eso no lo hace cualquiera ni siquiera yo, admiro como te expresas, admiro como me das amor y atención, admiro como me haces derretir de amor, admiro que siempre buscas lo mejor para cada momento, eres lo mejor que me ha pasado en mi vida., y una vez más mi Gianellita hermosa te lo digo de todo corazón y con todo el amor que puede caber en mi. Te amo💗.
+
+        <br><br>
+
+        No existen palabras suficientes para explicar
+        todo lo que siento por ti. Me encanta tu forma
+        de ser, tu sonrisa, tus detalles y cada pequeño
+        momento que compartimos.
+
+        <br><br>
+
+        Quiero seguir creando recuerdos contigo,
+        compartir risas, superar dificultades y
+        demostrarte cada día lo importante que eres
+        para mí.
+
+        <br><br>
+
+        Gracias por existir, por ser esa personita
+        tan especial y por hacer que mis días sean
+        mucho más bonitos.
+
+        <br><br>
+
+        Nunca olvides que me tienes a mí.
+
+        <br><br>
+
+        Te amo 💗
+
+    </div>
+
+    <div class="decoracion">💕 💌 💕</div>
+
+    <div class="firma">
+        Con muchísimo amor ❤️
+    </div>
+
+    <!-- REPRODUCTOR DE YOUTUBE -->
+
+    <div class="musica">
+
+        <p>🎵 Luna-Xq brillas en media noche 🎵</p>
+
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/RYlKXvCxBz8?si=qa7oGT8cvfR5PZvF&amp;start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+</div>
+
+<script>
+
+function abrirCarta() {
+
+    document.getElementById("inicio").style.display = "none";
+
+    document.getElementById("carta").style.display = "block";
+
+    document.getElementById("youtube").src =
+    "https://www.youtube.com/embed/RYlKXvCxBz8?autoplay=1&playsinline=1";
+
+}
+
+</script>
+
+</body>
+</html>
